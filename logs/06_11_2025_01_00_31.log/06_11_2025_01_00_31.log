@@ -1,0 +1,17 @@
+[ 2025-06-11 01:00:50,035 ] 16 root - INFO - initiate the data ingestion
+[ 2025-06-11 01:00:51,381 ] 96 pymongo.serverSelection - INFO - {"message": "Waiting for suitable server to become available", "selector": "Primary()", "operation": "find", "topologyDescription": "<TopologyDescription id: 684887eb555754f5d01a0534, topology_type: ReplicaSetNoPrimary, servers: [<ServerDescription ('ac-s25q3c5-shard-00-00.onzezj7.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-s25q3c5-shard-00-01.onzezj7.mongodb.net', 27017) server_type: Unknown, rtt: None>, <ServerDescription ('ac-s25q3c5-shard-00-02.onzezj7.mongodb.net', 27017) server_type: Unknown, rtt: None>]>", "clientId": {"$oid": "684887eb555754f5d01a0534"}, "remainingTimeMS": 30}
+[ 2025-06-11 01:00:59,689 ] 63 root - INFO - performed train test split on the dataframe
+[ 2025-06-11 01:00:59,689 ] 65 root - INFO - exited split_data_as_train_test method of data_ingestion class
+[ 2025-06-11 01:00:59,690 ] 71 root - INFO - exporting train and test file path.
+[ 2025-06-11 01:00:59,854 ] 80 root - INFO - exported train and test set to file path.
+[ 2025-06-11 01:00:59,856 ] 18 root - INFO - data initiation completed
+[ 2025-06-11 01:00:59,907 ] 22 root - INFO - initiate the data validation
+[ 2025-06-11 01:01:00,035 ] 31 root - INFO - Required number of columns: 2
+[ 2025-06-11 01:01:00,036 ] 32 root - INFO - data frame has columns:31
+[ 2025-06-11 01:01:00,036 ] 31 root - INFO - Required number of columns: 2
+[ 2025-06-11 01:01:00,036 ] 32 root - INFO - data frame has columns:31
+[ 2025-06-11 01:01:00,491 ] 31 root - INFO - Required number of columns: 2
+[ 2025-06-11 01:01:00,492 ] 32 root - INFO - data frame has columns:31
+[ 2025-06-11 01:01:00,492 ] 31 root - INFO - Required number of columns: 2
+[ 2025-06-11 01:01:00,492 ] 32 root - INFO - data frame has columns:31
+[ 2025-06-11 01:01:00,802 ] 25 root - INFO - data validation completed
