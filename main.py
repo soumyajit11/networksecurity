@@ -8,6 +8,8 @@ from networksecurity.entity.config_entity import TrainingPipelineConfig
 
 import sys
 
+from networksecurity.entity.config_entity import ModelTrainerConfig
+from networksecurity.components.model_trainer import ModelTrainer
 if __name__=='__main__':
 
     try:
@@ -32,5 +34,19 @@ if __name__=='__main__':
         print(data_transformation_artifact)
         logging.info("data transformation completed")
 
+        logging.info("model training started")
+        model_trainer_config=ModelTrainerConfig(trainingpipelineconfig)
+        model_trainer=ModelTrainer(model_trainer_config=model_trainer_config, data_transformation_artifact=data_transformation_artifact)
+        model_trainer_artifact=model_trainer.initiate_model_trainer()
+        logging.info("model training artifact created")
+        print("Training Metrics:")
+        print(f"F1 Score: {model_trainer_artifact.train_metric_artifact.f1_score}")
+        print(f"Precision: {model_trainer_artifact.train_metric_artifact.precision_score}")
+        print(f"Recall: {model_trainer_artifact.train_metric_artifact.recall_score}")
+
+        print("Testing Metrics:")
+        print(f"F1 Score: {model_trainer_artifact.test_metric_artifact.f1_score}")
+        print(f"Precision: {model_trainer_artifact.test_metric_artifact.precision_score}")
+        print(f"Recall: {model_trainer_artifact.test_metric_artifact.recall_score}")
     except Exception as e:
         raise NetworkSecurityException(e,sys)
