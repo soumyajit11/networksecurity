@@ -67,25 +67,26 @@ The goal of this project is to automate the process of detecting network anomali
 ```bash
 git clone https://github.com/soumyajit11/networksecurity.git
 cd networksecurity
-
+```
 
 ### 2️⃣ Create Virtual Environment
 
 ```bash
 conda create -n venv python=3.10
 conda activate venv/
+```
 
 
 ### 3️⃣ Install Requirements
 
 ```bash
 pip install -r requirements.txt
-
+```
 
 ### 4️⃣ Start FastAPI Server
 ```bash
 uvicorn app:app --reload
-
+```
 The Swagger UI will be available at:
 👉 http://127.0.0.1:8000/docs
 
